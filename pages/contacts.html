@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <title>Контакты</title>
+  <style>
+    form>div>label{
+      color: red;
+    }
+  </style>
 </head>
+
 <body>
-Контакты
+  Контакты
 
-Администрация Центра
-ЦАО, Госпитальный переулок, д. 4/6, 2-ой этаж
-+7 (495) 232-32-16
-info@specialist.ru
-
-Форма связи
-
-<!-- начало формы -->
-
-  Как Вас зовут <!-- однострочное текстовое поле -->
-
-
-  Тема запроса <!-- элемент выбора select -->
-    Запись на курсы
-    Предложения по улучшению
-    Вопросы по оплате
-
-
-
-  Когда Вам удобней ожидать ответ?  <!-- радио-кнопки -->
-   Сейчас
-   10:00 - 17:00
-   17:00 - 20:00
-
-   
-  введите сообщение <!-- многострочное текстовое поле -->
-
-  
-  <!-- элемент checkbox -->Соглашаюсь на обработку персональных данных   
-
-  
-   <!-- кнопка Отправить -->
-   <!-- кнопка Очистить -->
-
-<!-- завершение формы -->
+  Администрация Центра
+  ЦАО, Госпитальный переулок, д. 4/6, 2-ой этаж
+  +7 (495) 232-32-16
+  info@specialist.ru
+  <h1>
+    Форма связи
+  </h1>
+  <br>
+  <!-- начало формы -->
+  <form method="get">
+    <div class="row">
+      <label>Как Вас зовут</label>
+      <input type="text" name="firstname" required>
+    </div>
+    <!-- однострочное текстовое поле -->
+<div class="row">
+    <label>Тема запроса</label>
+     <select name="thema_param">
+      <option selected disabled>Выберите</option>
+      <option value="1">Запись на курсы></option>
+      <option value="2">Предложения по улучшению></option>
+      <option value="3">Вопросы по оплате</option>
+    </select>
+</div>
+    <br>
+    <!-- элемент выбора select -->
+    <div class="row">
+    <label>Когда Вам удобней ожидать ответ?</label>
+    <input type="radio" name="time_param" id="now">
+    <label for="now">Сейчас</label>
+    
+    <input type="radio" name="time_param" id="now1">
+    <label for="now1">10:00 - 17:00</label>
+    <input type="radio" name="time_param" checked id="now2">
+    <label for="now2">17:00 - 20:00</label>
+    </div>
+    <br>
+    <!-- радио-кнопки -->
+    <div class="row">
+    <textarea name="otziv_param" rows="10" cols="40" placeholder="Введите сообщение" required></textarea><br>
+  </div>
+    <!-- многострочное текстовое поле -->
+    <div class="row">
+    <!-- элемент checkbox -->
+    <input type="checkbox" name="sogl_param"><label> Соглашаюсь на обработку персональных данных</label>
+  </div>
+    <!-- кнопка Отправить -->
+  <div class="row">
+    <input type="submit" value="Ok">
+    <!-- кнопка Очистить -->
+    <input type="reset" value="neOk">
+    <!-- завершение формы -->
+  </div>
+  </form>
 </body>
+
 </html>
