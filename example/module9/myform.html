@@ -4,7 +4,23 @@
   <meta charset="UTF-8" />
   <title>HTML форма</title>
   <style>
-  
+  .div{
+    width: 50%;
+    height: 400px;
+  }
+  #test{
+    display: flex;
+  }
+  .div1{
+    background: aquamarine;
+    border-radius: 30%;
+
+  }
+  .div2{
+    background: gold;
+    border-radius: 200%;
+
+  }
   </style>
 </head>
 <body>
@@ -31,6 +47,10 @@
   </optgroup>
    </section>
    <input type="reset" value="Очистить" ><br>
+   <input type="color"> <br>
+   <input type="range" name="22"> <br>
+   <label title="22">ss</label>
+
    pass
    <input type="password" name="pass" ><br>
    <input type="button" name="but" onclick="fn()">
@@ -41,6 +61,19 @@
     </script>
     
   </form>
+  <br>
+  <div class="wrapper">
+
+    <div id="test">
+      <div class="div div1">First
+
+      </div>
+      <div class="div div2">Second
+
+      </div>
+    </div>
+
+  </div>
   
 </body>
 </html>

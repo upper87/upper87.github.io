@@ -42,3 +42,7 @@ table, td, th{
     iframe{
         border: 30;
     }
+    .wrapper{
+        width: 1000px;
+        margin: auto;
+    }
