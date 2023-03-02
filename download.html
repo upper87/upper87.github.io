@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="refresh" content="10; url=poleznoe.zip">
+</head>
+<span id="counter">10</span> sec
+
+<body>
+    <Script>
+        let counter = document.querySelector('#counter')
+        let i = 0, step = 10, tick = 1000;
+        function a() {
+            if (i < step) {
+                i++;
+                counter.innerHTML = 10 - i;
+                setTimeout(a, tick)
+            }
+        }
+        a()
+    </Script>
+</body>
+
+</html>
